@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" role="main">
+    <div class="page-header">
+        <h1>Register</h1>
+    </div>
+    <div class="row border border-dark rounded list-group-item-action flex-column align-items-start">
+        <div class="col-lg-12">
+            <div class="list-group">
+                <form method="POST" action="/register">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1"><h5>Username</h5></label>
+                        <input type="text" class="form-control" name="username" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1"><h5>Password</h5></label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1"><h5>Confirm Password</h5></label>
+                        <input type="password" class="form-control" name="cnfpass" placeholder="Enter confirm password">
+                    </div>
+                    <label for="exampleFormControlSelect1"><h5>Are you an expert</h5></label>
+                    <div class="form-group">
+                        <input type="radio" name="expt" value="1"> Yes
+                        <input type="radio" name="expt" value="0"> No
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
